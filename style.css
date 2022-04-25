@@ -1,0 +1,272 @@
+html{
+  font-size:62.5%;
+  box-sizing: border-box;
+  height: 100%;
+  
+}
+*,*::before,*::after{
+  box-sizing: inherit;
+}
+
+body{
+  font-size:1.6rem; font-size: 16px;
+  height: 100%;
+  padding: 2rem;  
+  background: linear-gradient(45deg, rgb(237, 235, 235) 30%, rgb(110, 102, 102) 50%);
+
+}
+main{
+  height: 100%;
+  width: 90%;
+  margin: auto;
+}
+.main1{
+  height: 80%;
+}
+.gameName{
+  font-size: 8rem;
+
+  text-align: center;
+}
+section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.choiceXO{
+  display: flex;
+}
+.gameBoard{
+
+  width: 45rem;
+  height: 45rem;
+  display: grid;
+  grid-template: repeat(3,1fr) / repeat(3,1fr);
+  gap: 1rem;
+  border-collapse: collapse;
+}
+
+.gameBoard div{
+  background: rgb(255, 255, 255);
+ font-size: 5rem;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ cursor: pointer;
+
+}
+.newImage{
+  width: 5rem;
+  height: 5rem;
+}
+.modalWindow{
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: rgb(19, 18, 18);
+  color: white;
+  border: 0.1rem solid black;
+  border-radius: 1rem;
+  width: min(500px,80%);
+  padding: 2rem;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.modalWindowVisible{
+  visibility: initial;
+}
+.modalBg{
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background:#4d4444;
+  pointer-events: none;
+}
+.modalBgVisible{
+  opacity: 0.8;
+  pointer-events: all;
+}
+.xo, #reset, #restart, #resetBotMode, #back, #easy, #difficult{
+  width: 19rem;
+  height: 3rem;
+  border-radius: 9999px;
+  
+  color: white;
+  border: none;
+}
+#X, #reset, #difficult{
+  background-color:  rgb(0, 0, 0) ;
+}
+#easy{
+  background-color: rgb(59, 110, 155);
+  margin-right: 1rem;
+
+}
+#restart{
+  background-color: white;
+  color: black;
+}
+.difficultyLevel{
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+#resetBotMode, #back{
+  background:linear-gradient(45deg, rgb(237, 235, 235) 30%, rgb(110, 102, 102) 50%);
+  color: black;
+ 
+}
+#back{
+  margin-top: 3rem;
+ 
+}
+#O{
+  background-color: rgb(255, 253, 253);
+  color: black;
+ 
+}
+#X{
+  margin-right: 9rem;
+}
+.startOver{
+  display: flex;
+  margin-top: 2rem;
+
+}
+#restart{
+  margin-left: 1rem;
+}
+.tip{
+  pointer-events: none;
+}
+
+.tictactoe-Visibility{
+ visibility: hidden;
+  position: absolute;
+}
+.player{
+  display: flex;
+  margin-bottom: 2rem;
+  width: 45rem;
+}
+
+.player1,.player2{
+  width: 50%;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.player1{
+  background: white;
+ border-top-left-radius: 9999px;
+ border-bottom-left-radius: 9999px;
+}
+.player2{
+  border-top-right-radius: 9999px;
+  border-bottom-right-radius: 9999px;
+  background: #5d5566;
+  color: white;
+}
+.winner{
+  margin: 2rem 0rem;
+}
+#newGame, #newGame2{
+  background:  rgb(0, 0, 0);
+  border: none;
+  color: white;
+  width: 15rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 9999px;
+}
+.mode{
+  position: absolute;
+  font-size: 10rem;
+  opacity: 0.5;
+  top: 2rem;
+  text-align: center;
+}
+.users{
+  display: flex;
+  cursor: pointer;
+
+}
+.users div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 2rem;
+}
+.users div img{
+  width:12rem
+}
+button,[data-XO]{
+  cursor: pointer;
+  position: relative;
+}
+
+.Xhoverless:hover{
+  background-image: url(/109602.svg);
+  background-size: 5rem;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: #af9b9b;
+
+}
+.Ohoverless:hover{
+  background-image: url(/16894.svg);
+  background-size: 5rem;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: #af9b9b;
+
+}
+
+
+@media(max-width:480px){
+  .gameName {
+    font-size: 5rem;
+  }
+  .users div img {
+    width: 10rem;
+  }
+  .mode {
+    font-size: 6rem;
+  }
+  .xo, #reset, #restart, #resetBotMode, #back, #easy, #difficult {
+    width: 11rem;
+    height: 2.1rem;
+    font-size: 1.4rem;
+  }
+  .gameBoard {
+    width: 29rem;
+    height: 29rem;
+  }
+  .player {
+    width: 29rem;
+    font-size: 1.4rem;
+  }
+  .player1, .player2 {
+    height: 2.1rem;
+  }
+  .Xhoverless:hover,.Ohoverless:hover{
+    background-size: 3rem;
+  }
+  .newImage {
+    width: 3rem;
+    height: 3rem;
+  }
+
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="normalize.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+
+  </header>
+  <main class="main1">
+    
+    
+    <div class= "gameName">TIC TAC TOE</div>
+    <section>
+      <div class="difficultyLevel">
+        <button id="easy" class="xo tictactoe-Visibility">Easy</button>
+        <button id="difficult" class="xo tictactoe-Visibility">Difficult</button>
+      </div>
+      <div class="choiceXO">
+        <button id="X" class="xo tictactoe-Visibility" type="button">X</button>
+        <Button id="O" class="xo tictactoe-Visibility" type="button">O</Button>
+      </div>
+      <div>
+        <div class="users">
+          <div id="twoPlayer" >
+            <img src="male-users.svg" alt="Two player">
+            <span>Two Player</span>
+           </div>
+            <div id="bot">
+           <img src="Untitled.png" alt="robot">
+           <span>Bot</span>
+          </div>
+        </div>
+        <button id="back" class="tictactoe-Visibility">Home</button>
+      </div>
+      <div class="mode"></div>
+        <div class="player"></div>
+            <div class="gameBoard tictactoe-Visibility" >
+              <div data-XO ></div>
+              <div data-XO ></div>
+              <div data-XO ></div>
+              <div data-XO ></div>
+              <div data-XO ></div>
+              <div data-XO ></div>
+              <div data-XO ></div>
+              <div data-XO ></div>
+              <div data-XO ></div>
+            </div>
+            <div class="startOver">
+              <button id="resetBotMode" class=" tictactoe-Visibility" type="button">Home</button>
+              <button id="reset" class=" tictactoe-Visibility" type="button">Reset</button>
+              <button id="restart" class=" tictactoe-Visibility"  type="button">Restart</button>
+            </div>
+    </section>
+  
+    
+  </main>
+
+  
+
+  <div class="modalWindow">
+    <div>TIC TAC TOE</div>
+    <div class="winner"></div>
+    <button type="button" id="newGame">NEW GAME</button>
+    <button type="button" id="newGame2">NEW GAME</button>
+  </div>
+  <div class="modalBg"></div>
+ 
+</body>
+</html>
