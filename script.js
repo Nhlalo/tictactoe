@@ -280,7 +280,7 @@ function restartGame(){
     cellBlock.classList.remove('Xhoverless')
   cellBlock.addEventListener('click',handleClick,{once: true})
   })
-
+  winnerDeclaration = true;
   let modalWindow = document.querySelector('.modalWindow')
   let modalBg = document.querySelector('.modalBg')
   modalWindow.classList.remove('modalWindowVisible');
@@ -293,8 +293,6 @@ function restartGame(){
   }
         oTurn = true;
         hTurn = false;
-        winnerDeclaration = true;
-
   }else{
     for(let i = 0; i < cellBlocks.length; i++){
       cellBlocks[i].classList.add('Ohoverless') 
@@ -302,6 +300,7 @@ function restartGame(){
   }
     oTurn = false;
     hTurn = true;
+    
   }
 
 } 
